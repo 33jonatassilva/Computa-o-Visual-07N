@@ -568,59 +568,7 @@ static void save_image_as_png(MyImage *image, const char *filename)
         SDL_Log("Imagem salva com sucesso em '%s'.", filename);
     }
 }
-//------------------------------------------------------------------------------
-// main()
-//------------------------------------------------------------------------------
-// int main(int argc, char *argv[])
-// {
-//     atexit(shutdown);
-//     if (argc < 2) {
-//         SDL_Log("Uso: %s <arquivo_imagem>", argv[0]);
-//         return SDL_APP_FAILURE;
-//     }
-//     if (initialize() == SDL_APP_FAILURE) return SDL_APP_FAILURE;
 
-//     g_font = TTF_OpenFont(FONT_FILENAME, FONT_SIZE);
-//     if (!g_font) {
-//         SDL_Log("Erro ao carregar a fonte '%s': %s", FONT_FILENAME, SDL_GetError());
-//         return SDL_APP_FAILURE;
-//     }
-
-//     load_rgba32(argv[1], g_window.renderer, &g_image, &g_image_two);
-
-//     // Converte a imagem principal para tons de cinza
-//     to_gray_scale(g_window.renderer, &g_image);
-    
-//     // CRÍTICO: Copia a versão em tons de cinza para o backup
-//     // para que a restauração funcione corretamente.
-//     SDL_memcpy(g_image_two.surface->pixels, g_image.surface->pixels, g_image.surface->h * g_image.surface->pitch);
-    
-//     // Calcula o histograma inicial (da imagem em tons de cinza)
-//     calculate_histogram();
-
-//     h_button.rect = (SDL_FRect){ .x = 300, .y = DEFAULT_H_WINDOW_HEIGHT - 100, .w = 190, .h = 35 };
-//     h_button.normal = (SDL_Color){0, 0, 200, 255};
-//     h_button.hover = (SDL_Color){20, 150, 220, 255};
-//     h_button.active = (SDL_Color){0, 0, 120, 255};
-//     h_button.hovered = false;
-//     h_button.pressed = false;
-
-//     int imageWidth = (int)g_image.rect.w;
-//     int imageHeight = (int)g_image.rect.h;
-//     if (imageWidth > 0 && imageHeight > 0)
-//     {
-//         SDL_SetWindowSize(g_window.window, imageWidth, imageHeight);
-//         SDL_SetWindowPosition(g_window.window, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
-//         int main_x, main_y, main_w, main_h;
-//         SDL_GetWindowPosition(g_window.window, &main_x, &main_y);
-//         SDL_GetWindowSize(g_window.window, &main_w, &main_h);
-//         SDL_SetWindowPosition(h_window.window, main_x + main_w + 10, main_y);
-//     }
-    
-//     loop();
-
-//     return 0;
-// }
 
 //------------------------------------------------------------------------------
 // main()
